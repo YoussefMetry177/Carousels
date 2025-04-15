@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sellabroadside</title>
+    <title>Vinna AI</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,9 +11,10 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f5f8ff;
         }
         header {
-            background-color: #4a6fa5;
+            background-color: #4a4fff;
             color: white;
             text-align: center;
             padding: 1rem;
@@ -31,13 +32,126 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-bottom: 4rem;
         }
         .feature-card {
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 1.5rem;
-            background-color: #f9f9f9;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Carousel styles */
+        .carousel-container {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto 4rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .carousel {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: carousel 20s infinite;
+        }
+        .carousel-slide {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .carousel-slide:nth-child(1) {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .carousel-slide:nth-child(2) {
+            background: linear-gradient(135deg, #5ee7df, #b490ca);
+        }
+        .carousel-slide:nth-child(3) {
+            background: linear-gradient(135deg, #f6d365, #fda085);
+        }
+        .carousel-slide:nth-child(4) {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+        }
+        
+        @keyframes carousel {
+            0%, 20% {
+                transform: translateX(0);
+            }
+            25%, 45% {
+                transform: translateX(-25%);
+            }
+            50%, 70% {
+                transform: translateX(-50%);
+            }
+            75%, 95% {
+                transform: translateX(-75%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
+        .carousel-slide .content {
+            text-align: center;
+            padding: 2rem;
+            opacity: 0;
+            animation: fade-in 1s ease forwards;
+            animation-delay: calc(var(--delay) * 1s);
+        }
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Partners section */
+        .partners-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        
+        .partners-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .partners-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .partner-iframe {
+            width: 100%;
+            height: 120px;
+            border: none;
+            overflow: hidden;
+        }
+        
         footer {
             background-color: #333;
             color: white;
@@ -49,14 +163,51 @@
 </head>
 <body>
     <header>
-        <h1>Sellabroadside</h1>
-        <p>Buy and sell items online</p>
+        <h1>Vinna AI</h1>
+        <p>Artificial Intelligence Solutions</p>
     </header>
 
     <main>
         <section class="hero">
-            <h2>Welcome to Sellabroadside</h2>
-            <p>The easiest way to buy and sell items online</p>
+            <h2>Welcome to Vinna AI</h2>
+            <p>Empowering businesses with cutting-edge AI technology</p>
+        </section>
+
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <div class="content" style="--delay: 0">
+                        <h2>Advanced Machine Learning</h2>
+                        <p>Powering the next generation of smart applications</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="content" style="--delay: 5">
+                        <h2>Natural Language Processing</h2>
+                        <p>Understanding human language at scale</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="content" style="--delay: 10">
+                        <h2>Computer Vision</h2>
+                        <p>Seeing and interpreting the world</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="content" style="--delay: 15">
+                        <h2>Predictive Analytics</h2>
+                        <p>Turning data into actionable insights</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <h2 class="partners-title">Partners & Backers:</h2>
+            <div class="partners-container">
+                <iframe src="carousel1.html" class="partner-iframe" scrolling="no"></iframe>
+                <iframe src="carousel2.html" class="partner-iframe" scrolling="no"></iframe>
+            </div>
         </section>
 
         <section class="features">
@@ -80,7 +231,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Sellabroadside. All rights reserved.</p>
+        <p>&copy; 2023 Vinna AI. All rights reserved.</p>
     </footer>
 </body>
 </html> 
