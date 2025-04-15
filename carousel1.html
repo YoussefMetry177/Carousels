@@ -35,6 +35,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
         }
         
         .logo img {
@@ -42,40 +45,67 @@
             max-height: 60px;
             object-fit: contain;
         }
+        
+        /* Fallback colored boxes with text for logos that don't load */
+        .logo-fallback {
+            width: 10rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .dp-world { background-color: #0077c8; }
+        .mastercard { background-color: #eb001b; }
+        .amex { background-color: #006fcf; }
+        .gemini { background-color: #5d78ff; }
+        .openai { background-color: #10a37f; }
+        .antler { background-color: #ff4b4b; }
+        .moi { background-color: #006c35; }
+        .moneyhash { background-color: #1a1a1a; }
+        .salasa { background-color: #4caf50; }
+        .tamara { background-color: #000000; }
+        .tabby { background-color: #49de80; }
+        .fulfillment { background-color: #9c27b0; }
+        .flair { background-color: #3f51b5; }
     </style>
 </head>
 <body>
     <div class="carousel-container">
         <div class="carousel">
-            <!-- First set of logos -->
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/DP_World_logo.svg/320px-DP_World_logo.svg.png" alt="DP World"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png" alt="Mastercard"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/320px-American_Express_logo_%282018%29.svg.png" alt="American Express"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Gemini_logo.svg/320px-Gemini_logo.svg.png" alt="Gemini"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/320px-OpenAI_Logo.svg.png" alt="OpenAI"></div>
-            <div class="logo"><img src="https://www.antler.co/static/05bd2c0b48ba74fb32b985e39ccfceea/antler-logo.svg" alt="Antler"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ministry_of_Investment_Logo.svg/320px-Ministry_of_Investment_Logo.svg.png" alt="Ministry of Investment"></div>
-            <div class="logo"><img src="https://www.moneyhash.io/assets/logo.png" alt="MoneyHash"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Salasa-Logo.png/320px-Salasa-Logo.png" alt="Salasa"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tamara_logo.svg/320px-Tamara_logo.svg.png" alt="Tamara"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Tabby_logo.svg/320px-Tabby_logo.svg.png" alt="Tabby"></div>
-            <div class="logo"><img src="https://fulfillment.io/wp-content/uploads/2022/11/fulfillment-logo.png" alt="Fulfillment"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flair_Logo.png/320px-Flair_Logo.png" alt="Flair"></div>
+            <!-- First set of logos with fallbacks -->
+            <div class="logo-fallback dp-world">DP World</div>
+            <div class="logo-fallback mastercard">Mastercard</div>
+            <div class="logo-fallback amex">American Express</div>
+            <div class="logo-fallback gemini">Gemini</div>
+            <div class="logo-fallback openai">OpenAI</div>
+            <div class="logo-fallback antler">Antler</div>
+            <div class="logo-fallback moi">Ministry of Investment</div>
+            <div class="logo-fallback moneyhash">MoneyHash</div>
+            <div class="logo-fallback salasa">Salasa</div>
+            <div class="logo-fallback tamara">Tamara</div>
+            <div class="logo-fallback tabby">Tabby</div>
+            <div class="logo-fallback fulfillment">Fulfillment</div>
+            <div class="logo-fallback flair">Flair</div>
             
             <!-- Duplicated for infinite scroll effect -->
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/DP_World_logo.svg/320px-DP_World_logo.svg.png" alt="DP World"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png" alt="Mastercard"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/320px-American_Express_logo_%282018%29.svg.png" alt="American Express"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Gemini_logo.svg/320px-Gemini_logo.svg.png" alt="Gemini"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/320px-OpenAI_Logo.svg.png" alt="OpenAI"></div>
-            <div class="logo"><img src="https://www.antler.co/static/05bd2c0b48ba74fb32b985e39ccfceea/antler-logo.svg" alt="Antler"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Ministry_of_Investment_Logo.svg/320px-Ministry_of_Investment_Logo.svg.png" alt="Ministry of Investment"></div>
-            <div class="logo"><img src="https://www.moneyhash.io/assets/logo.png" alt="MoneyHash"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Salasa-Logo.png/320px-Salasa-Logo.png" alt="Salasa"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tamara_logo.svg/320px-Tamara_logo.svg.png" alt="Tamara"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Tabby_logo.svg/320px-Tabby_logo.svg.png" alt="Tabby"></div>
-            <div class="logo"><img src="https://fulfillment.io/wp-content/uploads/2022/11/fulfillment-logo.png" alt="Fulfillment"></div>
-            <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flair_Logo.png/320px-Flair_Logo.png" alt="Flair"></div>
+            <div class="logo-fallback dp-world">DP World</div>
+            <div class="logo-fallback mastercard">Mastercard</div>
+            <div class="logo-fallback amex">American Express</div>
+            <div class="logo-fallback gemini">Gemini</div>
+            <div class="logo-fallback openai">OpenAI</div>
+            <div class="logo-fallback antler">Antler</div>
+            <div class="logo-fallback moi">Ministry of Investment</div>
+            <div class="logo-fallback moneyhash">MoneyHash</div>
+            <div class="logo-fallback salasa">Salasa</div>
+            <div class="logo-fallback tamara">Tamara</div>
+            <div class="logo-fallback tabby">Tabby</div>
+            <div class="logo-fallback fulfillment">Fulfillment</div>
+            <div class="logo-fallback flair">Flair</div>
         </div>
     </div>
 </body>
