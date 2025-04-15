@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background-color: transparent;
         }
         
         @keyframes slide {
@@ -31,81 +32,73 @@
         
         .logo {
             width: 10rem;
-            height: auto;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: white;
             padding: 10px;
             border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .logo img {
+            width: auto;
+            height: auto;
             max-width: 100%;
-            max-height: 60px;
+            min-width: 85%;
+            max-height: 50px;
+            min-height: 35px;
             object-fit: contain;
         }
         
-        /* Fallback colored boxes with text for logos that don't load */
-        .logo-fallback {
-            width: 10rem;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            border-radius: 8px;
+        /* Special styling for specific logos */
+        .logo-visa img {
+            transform: scale(1.5);
+            min-width: 100%;
+            min-height: 45px;
         }
         
-        .dp-world { background-color: #0077c8; }
-        .mastercard { background-color: #eb001b; }
-        .amex { background-color: #006fcf; }
-        .gemini { background-color: #5d78ff; }
-        .openai { background-color: #10a37f; }
-        .antler { background-color: #ff4b4b; }
-        .moi { background-color: #006c35; }
-        .moneyhash { background-color: #1a1a1a; }
-        .salasa { background-color: #4caf50; }
-        .tamara { background-color: #000000; }
-        .tabby { background-color: #49de80; }
-        .fulfillment { background-color: #9c27b0; }
-        .flair { background-color: #3f51b5; }
+        /* Extra large scaling for the smallest logos */
+        .logo-amex img, .logo-dpworld img, .logo-freightos img {
+            transform: scale(2.2);
+            min-width: 100%;
+            min-height: 50px;
+        }
     </style>
 </head>
 <body>
     <div class="carousel-container">
         <div class="carousel">
-            <!-- First set of logos with fallbacks -->
-            <div class="logo-fallback dp-world">DP World</div>
-            <div class="logo-fallback mastercard">Mastercard</div>
-            <div class="logo-fallback amex">American Express</div>
-            <div class="logo-fallback gemini">Gemini</div>
-            <div class="logo-fallback openai">OpenAI</div>
-            <div class="logo-fallback antler">Antler</div>
-            <div class="logo-fallback moi">Ministry of Investment</div>
-            <div class="logo-fallback moneyhash">MoneyHash</div>
-            <div class="logo-fallback salasa">Salasa</div>
-            <div class="logo-fallback tamara">Tamara</div>
-            <div class="logo-fallback tabby">Tabby</div>
-            <div class="logo-fallback fulfillment">Fulfillment</div>
-            <div class="logo-fallback flair">Flair</div>
+            <!-- First set of logos - Using carousel2 images in correct order -->
+            <div class="logo"><img src="carousel2/mastercard.png" alt="Mastercard"></div>
+            <div class="logo logo-amex"><img src="carousel2/americanexpress.png" alt="American Express"></div>
+            <div class="logo"><img src="carousel2/gemini.png" alt="Gemini"></div>
+            <div class="logo"><img src="carousel2/openai.png" alt="OpenAI"></div>
+            <div class="logo"><img src="carousel2/antler.png" alt="Antler"></div>
+            <div class="logo"><img src="carousel2/ministry.png" alt="Ministry of Investment"></div>
+            <div class="logo"><img src="carousel2/amazonpayments.png" alt="Amazon Payments"></div>
+            <div class="logo"><img src="carousel2/amazonbedrock.png" alt="Amazon Bedrock"></div>
+            <div class="logo logo-freightos"><img src="carousel2/freightos.png" alt="Freightos"></div>
+            <div class="logo logo-visa"><img src="carousel2/visa.png" alt="Visa"></div>
+            <div class="logo"><img src="carousel2/worldpay.png" alt="Worldpay"></div>
+            <div class="logo"><img src="carousel2/searates.png" alt="Sea Rates"></div>
+            <div class="logo logo-dpworld"><img src="carousel2/dpworld.png" alt="DP World"></div>
             
             <!-- Duplicated for infinite scroll effect -->
-            <div class="logo-fallback dp-world">DP World</div>
-            <div class="logo-fallback mastercard">Mastercard</div>
-            <div class="logo-fallback amex">American Express</div>
-            <div class="logo-fallback gemini">Gemini</div>
-            <div class="logo-fallback openai">OpenAI</div>
-            <div class="logo-fallback antler">Antler</div>
-            <div class="logo-fallback moi">Ministry of Investment</div>
-            <div class="logo-fallback moneyhash">MoneyHash</div>
-            <div class="logo-fallback salasa">Salasa</div>
-            <div class="logo-fallback tamara">Tamara</div>
-            <div class="logo-fallback tabby">Tabby</div>
-            <div class="logo-fallback fulfillment">Fulfillment</div>
-            <div class="logo-fallback flair">Flair</div>
+            <div class="logo"><img src="carousel2/mastercard.png" alt="Mastercard"></div>
+            <div class="logo logo-amex"><img src="carousel2/americanexpress.png" alt="American Express"></div>
+            <div class="logo"><img src="carousel2/gemini.png" alt="Gemini"></div>
+            <div class="logo"><img src="carousel2/openai.png" alt="OpenAI"></div>
+            <div class="logo"><img src="carousel2/antler.png" alt="Antler"></div>
+            <div class="logo"><img src="carousel2/ministry.png" alt="Ministry of Investment"></div>
+            <div class="logo"><img src="carousel2/amazonpayments.png" alt="Amazon Payments"></div>
+            <div class="logo"><img src="carousel2/amazonbedrock.png" alt="Amazon Bedrock"></div>
+            <div class="logo logo-freightos"><img src="carousel2/freightos.png" alt="Freightos"></div>
+            <div class="logo logo-visa"><img src="carousel2/visa.png" alt="Visa"></div>
+            <div class="logo"><img src="carousel2/worldpay.png" alt="Worldpay"></div>
+            <div class="logo"><img src="carousel2/searates.png" alt="Sea Rates"></div>
+            <div class="logo logo-dpworld"><img src="carousel2/dpworld.png" alt="DP World"></div>
         </div>
     </div>
 </body>

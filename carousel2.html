@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            background-color: transparent;
         }
         
         @keyframes slide {
@@ -31,82 +32,100 @@
         
         .logo {
             width: 10rem;
-            height: auto;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: white;
             padding: 10px;
             border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
         .logo img {
+            width: auto;
+            height: auto;
             max-width: 100%;
-            max-height: 60px;
+            min-width: 85%;
+            max-height: 50px;
+            min-height: 35px;
             object-fit: contain;
+            border: 1px solid transparent;
         }
         
-        /* Fallback colored boxes with text for logos that don't load */
-        .logo-fallback {
-            width: 10rem;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            border-radius: 8px;
+        /* Special styling for specific logos that need to be larger */
+        .logo-tabby img {
+            transform: scale(1.5);
+            min-width: 100%;
+            min-height: 45px;
         }
         
-        .dp-world { background-color: #0077c8; }
-        .mastercard { background-color: #eb001b; }
-        .amex { background-color: #006fcf; }
-        .gemini { background-color: #5d78ff; }
-        .openai { background-color: #10a37f; }
-        .antler { background-color: #ff4b4b; }
-        .moi { background-color: #006c35; }
-        .moneyhash { background-color: #1a1a1a; }
-        .salasa { background-color: #4caf50; }
-        .tamara { background-color: #000000; }
-        .tabby { background-color: #49de80; }
-        .fulfillment { background-color: #9c27b0; }
-        .flair { background-color: #3f51b5; }
+        /* Extra large scaling for the smallest logos */
+        .logo-amex img, .logo-nowlun img, .logo-paymob img {
+            transform: scale(2.2);
+            min-width: 100%;
+            min-height: 50px;
+        }
+
+        /* Make Tamara moderately sized */
+        .logo-tamara img {
+            transform: scale(1.1);
+            max-width: 90%;
+            max-height: 42px;
+        }
+
+        /* Add error styling to see if images fail to load */
+        .logo img:not([src]), .logo img[src=""], .logo img[src="#"] {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+        }
     </style>
 </head>
 <body>
     <div class="carousel-container">
         <div class="carousel">
-            <!-- First set of logos with fallbacks -->
-            <div class="logo-fallback flair">Flair</div>
-            <div class="logo-fallback fulfillment">Fulfillment</div>
-            <div class="logo-fallback tabby">Tabby</div>
-            <div class="logo-fallback tamara">Tamara</div>
-            <div class="logo-fallback salasa">Salasa</div>
-            <div class="logo-fallback moneyhash">MoneyHash</div>
-            <div class="logo-fallback moi">Ministry of Investment</div>
-            <div class="logo-fallback antler">Antler</div>
-            <div class="logo-fallback openai">OpenAI</div>
-            <div class="logo-fallback gemini">Gemini</div>
-            <div class="logo-fallback amex">American Express</div>
-            <div class="logo-fallback mastercard">Mastercard</div>
-            <div class="logo-fallback dp-world">DP World</div>
+            <!-- First set of logos - using carousel1 images in reversed order -->
+            <div class="logo"><img src="carousel1/paytabs.png" alt="PayTabs"></div>
+            <div class="logo logo-nowlun"><img src="carousel1/nowlun.png" alt="Nowlun"></div>
+            <div class="logo"><img src="carousel1/moneyhash.png" alt="MoneyHash"></div>
+            <div class="logo"><img src="carousel1/salasa.png" alt="Salasa"></div>
+            <div class="logo logo-tamara"><img src="carousel1/tamara.png" alt="Tamara"></div>
+            <div class="logo logo-tabby"><img src="carousel1/tabby.png" alt="Tabby"></div>
+            <div class="logo"><img src="carousel1/iqfulfillment.png" alt="IQ Fulfillment"></div>
+            <div class="logo"><img src="carousel1/flair.png" alt="Flair"></div>
+            <div class="logo logo-paymob"><img src="carousel1/paymob.png" alt="Paymob"></div>
+            <div class="logo"><img src="carousel1/mada.png" alt="Mada"></div>
+            <div class="logo logo-amex"><img src="carousel1/americanexpress.png" alt="American Express"></div>
+            <div class="logo"><img src="carousel1/saudigate.png" alt="Saudi Gate"></div>
+            <div class="logo"><img src="carousel1/khazenly.png" alt="Khazenly"></div>
             
             <!-- Duplicated for infinite scroll effect -->
-            <div class="logo-fallback flair">Flair</div>
-            <div class="logo-fallback fulfillment">Fulfillment</div>
-            <div class="logo-fallback tabby">Tabby</div>
-            <div class="logo-fallback tamara">Tamara</div>
-            <div class="logo-fallback salasa">Salasa</div>
-            <div class="logo-fallback moneyhash">MoneyHash</div>
-            <div class="logo-fallback moi">Ministry of Investment</div>
-            <div class="logo-fallback antler">Antler</div>
-            <div class="logo-fallback openai">OpenAI</div>
-            <div class="logo-fallback gemini">Gemini</div>
-            <div class="logo-fallback amex">American Express</div>
-            <div class="logo-fallback mastercard">Mastercard</div>
-            <div class="logo-fallback dp-world">DP World</div>
+            <div class="logo"><img src="carousel1/paytabs.png" alt="PayTabs"></div>
+            <div class="logo logo-nowlun"><img src="carousel1/nowlun.png" alt="Nowlun"></div>
+            <div class="logo"><img src="carousel1/moneyhash.png" alt="MoneyHash"></div>
+            <div class="logo"><img src="carousel1/salasa.png" alt="Salasa"></div>
+            <div class="logo logo-tamara"><img src="carousel1/tamara.png" alt="Tamara"></div>
+            <div class="logo logo-tabby"><img src="carousel1/tabby.png" alt="Tabby"></div>
+            <div class="logo"><img src="carousel1/iqfulfillment.png" alt="IQ Fulfillment"></div>
+            <div class="logo"><img src="carousel1/flair.png" alt="Flair"></div>
+            <div class="logo logo-paymob"><img src="carousel1/paymob.png" alt="Paymob"></div>
+            <div class="logo"><img src="carousel1/mada.png" alt="Mada"></div>
+            <div class="logo logo-amex"><img src="carousel1/americanexpress.png" alt="American Express"></div>
+            <div class="logo"><img src="carousel1/saudigate.png" alt="Saudi Gate"></div>
+            <div class="logo"><img src="carousel1/khazenly.png" alt="Khazenly"></div>
         </div>
     </div>
+    <script>
+        // Add this script to check if all images are loaded
+        window.addEventListener('load', function() {
+            console.log('Page fully loaded, checking images');
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.complete || img.naturalHeight === 0) {
+                    console.log('Image failed to load:', img.alt);
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
